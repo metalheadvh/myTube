@@ -1,0 +1,58 @@
+.nav-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: green;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  flex-wrap: nowrap;
+  max-height: 80px;
+  width: 100%;
+}
+.menu-icon {
+  margin: 1rem;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+}
+.button {
+  padding: 1rem;
+}
+.button a {
+  padding: 0.5rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  color: var(--dark-gray);
+  transition: 0.3s ease-in;
+}
+
+.button a:hover {
+  border-radius: 30%;
+  background-color: var(--lighter-gray);
+}
+
+.button.menu {
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .buttons .browse {
+    display: none;
+  }
+  .buttons .upload {
+    display: none;
+  }
+  .buttons .logo {
+    display: none;
+  }
+}

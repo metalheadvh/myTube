@@ -1,17 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { useState } from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import Navbar from "./Components/Navbar/Navbar";
+import Videos from "./Components/Common/VideoGridBig/VideoGridBig";
+import Sidebar from "./Components/Sidebar/Sidebar";
+import VideoWindow from "./Components/VideoWindow/VideoWindow";
+import VideoList from "./Components/VideoList/VideoList";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <Navbar />
+    <main>
+      <Sidebar isMobile={false} />
+      <Videos />
+    </main>
+    {/* <div className="video-boxes">
+      <div className="video-page">
+        <VideoWindow />
+        <VideoList />
+      </div>
+    </div> */}
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

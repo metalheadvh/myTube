@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  width: 90%;
+}
+.description-container {
+  display: block;
+  background-color: var(--light-gray);
+  margin-right: 1rem;
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+.title-card {
+  border-radius: 2rem;
+}
+
+.description-card {
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.video-comments {
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.description-container.title {
+  background-color: white;
+}
+
+.description-container.channel {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+.containers {
+  padding: 1rem;
+}

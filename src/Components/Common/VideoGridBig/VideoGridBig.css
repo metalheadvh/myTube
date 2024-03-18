@@ -1,0 +1,12 @@
+.videos-main-container {
+  height: 1700px;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+}
+
+.videos-box {
+  width: 100%;
+  grid-area: main;
+  background-color: blue;
+}

@@ -1,0 +1,23 @@
+.share-box {
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-color);
+  box-shadow: var(--shadow-secondary);
+  padding: 0.5rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  color: var(--white-color);
+  transition: 0.3s ease-in;
+}
+
+.share-box:hover {
+  box-shadow: var(--shadow-primary);
+}
+
+.share-box p {
+  padding: 0 0.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}

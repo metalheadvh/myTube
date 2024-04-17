@@ -1,40 +1,50 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import "./Navbar.css";
-import Search from "../Common/Search/Search";
+import Search from "../Navbar/Search/Search";
+import Logo from "./Logo/Logo";
+import { Link } from "react-router-dom";
+import { UserProfileContext } from "../../Contexts/UserProfileContextProvider";
+import { SidebarContext } from "../../Contexts/SidebarContextProvider";
 
 export default function Navbar() {
-  const [menuState, setMenuState] = useState(true);
-
-  function toggleMenuState() {
-    // setMenuState((prev) => {
-    //   return !prev;
-    // });
-    setMenuState(!menuState);
-    console.log(menuState);
-  }
+  const { user } = useContext(UserProfileContext);
+  const { toggleIsMobile } = useContext(SidebarContext);
 
   return (
     <nav className="nav-box">
       <div className="navbar">
         <div className="buttons">
-          <div className="button menu" onClick={toggleMenuState}>
-            <div className="fa-solid fa-bars"></div>
-          </div>
-          <div className="button logo">
-            <a className="fa-brands fa-square-youtube" href="#"></a>
-          </div>
+          <span className="fa-solid fa-bars" onClick={toggleIsMobile}></span>
+          <Link to="/">
+            <Logo />
+          </Link>
+          <h3>MyTube</h3>
         </div>
         <Search />
         <div className="buttons right">
-          <div className="button browse">
-            <a className="fa-solid fa-ticket" href="#"></a>
+          <Link to="/explore">
+            <div className="button-nav browse">
+              <p className="fa-solid fa-ticket"></p>
+            </div>
+          </Link>
+
+          <div className="button-nav upload">
+            <p className="fa-solid fa-video"></p>
           </div>
-          <div className="button upload">
-            <a className="fa-solid fa-video" href="#"></a>
-          </div>
-          <div className="button user">
-            <a class="fa-solid fa-user" href="#"></a>
-          </div>
+
+          {user ? (
+            <Link to="profile">
+              <div className="button-nav user">
+                <p className="fa-solid fa-user"></p>
+              </div>
+            </Link>
+          ) : (
+            <Link to="login">
+              <div className="button-nav user">
+                <p className="fa-solid fa-user"></p>
+              </div>
+            </Link>
+          )}
         </div>
       </div>
     </nav>

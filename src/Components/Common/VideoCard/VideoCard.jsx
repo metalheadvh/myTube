@@ -1,32 +1,33 @@
 import React from "react";
 import "./VideoCard.css";
+import { Link } from "react-router-dom";
 
-export default function Card({ link, image, name, channelName, channelImage, channelLink, views }) {
+export default function Card({ image, name, channelName, channelImage, views, id }) {
   return (
     <div className="video-card">
-      <a href={link}>
+      <Link to={`/video-page/${id}`}>
         <img className="video-image" src={image} alt="" />
-      </a>
+      </Link>
 
       <div className="description-boxes">
         <div className="video-description logo">
           <div className="channel-logo">
             <div className="channel-image">
-              <a href={channelLink}>
+              <Link to={`/channel-page/${channelName.replace(/\s+/g, "")}`}>
                 <img src={channelImage} alt="" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
         <div className="video-description">
-          <a className="video-name" href={link}>
+          <Link to={`/video-page/${id}`} className="video-name">
             <h3>{name}</h3>
-          </a>
-          <a className="channel-name" href={channelLink}>
+          </Link>
+          <Link to={`/channel-page/${channelName.replace(/\s+/g, "")}`} className="channel-name">
             {channelName}
-          </a>
+          </Link>
 
-          <p style={{ color: "green", margin: "0.5rem" }}>{`${views} views`}</p>
+          <p style={{ color: "var(--primary-color)", margin: "0.5rem" }}>{`${views} views`}</p>
         </div>
       </div>
     </div>

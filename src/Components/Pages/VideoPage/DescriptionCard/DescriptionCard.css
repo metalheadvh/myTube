@@ -1,0 +1,110 @@
+.containers {
+  padding: 1rem 0;
+  box-shadow: var(--shadow-secondary);
+  border-radius: 2rem;
+  margin: 1rem 0;
+  width: 100%;
+}
+.description-container.description {
+  display: block;
+  box-shadow: var(--shadow-primary);
+  margin: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.title-card {
+  border-radius: 2rem;
+}
+
+.description-card {
+  padding: 2rem 1rem;
+  border-radius: 2rem;
+}
+
+.video-comments {
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.description-container.title {
+  background-color: transparent;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  border: none;
+}
+
+.buttons-description-card {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.right-description-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+}
+.right-description-buttons .share-box {
+  margin-left: 0.5rem;
+}
+
+.left-description-buttons {
+  display: flex;
+}
+
+.description-channel-name {
+  font-size: 1rem;
+  margin: 0 1rem 0 0.5rem;
+}
+
+.like-button {
+  display: none;
+  align-items: center;
+}
+
+.like-button p {
+  padding: 0.5rem 2rem;
+  margin: 2rem;
+  border: 1px solid var(--black-color);
+  color: var(--black-color);
+  font-weight: bold;
+  border-radius: 2rem;
+  box-shadow: var(--shadow-primary);
+  text-align: center;
+}
+
+.comments {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1381px) {
+  .right-description-buttons {
+    display: none;
+  }
+}
+
+@media (max-width: 514px) {
+  .buttons-description-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .description-channel-name {
+    margin: 1rem 0 2rem;
+  }
+
+  .description-container.title {
+    font-size: 0.7rem;
+  }
+}

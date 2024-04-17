@@ -1,0 +1,25 @@
+.show-text.active {
+  display: none;
+}
+
+.show-more {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.show-more button {
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  color: var(--black-color);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  transition: 0.3s ease-in;
+  box-shadow: var(--shadow-primary);
+}
+.show-more button:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}

@@ -1,0 +1,87 @@
+.comments-section {
+  box-shadow: var(--shadow-primary);
+  width: 100%;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  margin: 0 1rem;
+}
+.comments-section h2 {
+  padding: 0 0.5rem;
+  margin: 1rem;
+}
+
+.comment-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  padding-right: 1rem;
+}
+
+.comments-section input {
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  border: none;
+  width: 400px;
+  box-shadow: var(--shadow-primary);
+  outline: none;
+  color: var(--black-color);
+}
+
+.comments-section button {
+  padding: 1rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: white;
+  box-shadow: var(--shadow-primary);
+  color: var(--black-color);
+  cursor: pointer;
+  transition: 0.3s ease-in;
+  font-weight: bold;
+}
+.comments-section button:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.comments-section ul {
+  margin: 1rem;
+  padding: 0.5rem 1.5rem;
+  list-style: circle;
+  border-radius: 1rem;
+}
+
+.comments-section li {
+  margin: 1rem 0;
+  padding: 1rem;
+  box-shadow: var(--shadow-primary);
+  color: var(--black-color);
+  border-radius: 1rem;
+  line-height: 1.5rem;
+  white-space: pre-wrap;
+}
+
+.comments-section span {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.please-login {
+  margin: 2rem 1.5rem;
+}
+
+.please-login-link {
+  text-decoration: none;
+  margin: 0 0.25rem;
+}
+
+.comment-inputs {
+  display: flex;
+}
+
+@media (max-width: 662px) {
+  .comments-section {
+    box-shadow: none;
+  }
+}

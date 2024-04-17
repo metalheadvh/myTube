@@ -1,0 +1,9 @@
+.videoGrid {
+  max-height: 1700px;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  box-shadow: var(--shadow-primary);
+  border-radius: 2rem;
+  margin: 0 0.5rem 1rem 0.5rem;
+}

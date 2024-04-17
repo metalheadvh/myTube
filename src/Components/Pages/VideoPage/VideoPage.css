@@ -1,0 +1,12 @@
+.video-boxes {
+  display: flex;
+  margin: 1rem 0;
+  max-width: 100%;
+}
+
+@media (max-width: 1048px) {
+  .video-boxes {
+    display: block;
+    width: 100%;
+  }
+}

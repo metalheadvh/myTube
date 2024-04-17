@@ -1,0 +1,25 @@
+.sidebar-text {
+  display: flex;
+  padding: 0.5rem 0.5rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+
+.sidebar-text:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.sidebar-icon {
+  margin: 0 0.5rem;
+  color: var(--dark-gray);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 757px) {
+  .sidebar-text p {
+    display: none;
+  }
+}

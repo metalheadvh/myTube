@@ -1,0 +1,10 @@
+.description-card-image {
+  background-image: url("https://picsum.photos/100/100?random=2");
+  width: 60px;
+  height: 60px;
+  border-radius: 2rem;
+  cursor: pointer;
+  margin: 1rem;
+  box-shadow: var(--shadow-primary);
+  border: 1px solid gray;
+}

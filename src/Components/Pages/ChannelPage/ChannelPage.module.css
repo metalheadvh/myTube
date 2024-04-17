@@ -1,0 +1,45 @@
+.channelVideos {
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-primary);
+  border-radius: 2rem;
+  margin: 0 0.5rem;
+}
+
+.buttonsBox {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin: 0 0.5rem;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 1rem 0;
+  box-shadow: var(--shadow-primary);
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+}
+
+.buttons button {
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s ease-in;
+  border: none;
+}
+
+.buttons button:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}

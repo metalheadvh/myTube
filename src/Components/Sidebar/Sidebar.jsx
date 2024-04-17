@@ -1,129 +1,40 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Sidebar.css";
-import Navbar from "../Navbar/Navbar";
-import SubscriberCard from "../Common/SubscriberCard/SubscriberCard";
-import { videos } from "../../data/videos";
+import SidebarCard from "./SidebarCard/SidebarCard";
+import { Link } from "react-router-dom";
+import Subscriptions from "./Subscriptions/Subscriptions";
+import You from "./You/You";
+import Explore from "./Explore/Explore";
+import { SidebarContext } from "../../Contexts/SidebarContextProvider";
 
-const Sidebar = ({ isMobile }) => {
+const Sidebar = () => {
+  const { isMobile } = useContext(SidebarContext);
+
   return (
-    <div className={isMobile ? "sidebar mini" : "sidebar"}>
-      <div className="text">
-        <div className="icon">
-          <a class="fa-solid fa-house"></a>
-        </div>
-        <p>Home</p>
-      </div>
-      <div className="text">
-        <div className="icon">
-          <a class="fa-solid fa-ticket"></a>
-        </div>
-        <p>Browse</p>
-      </div>
-      <hr />
-      <span className="span">You</span>
-      <div className="text">
-        <div className="icon">
-          <a class="fa-solid fa-user"></a>
-        </div>
-        <p>Your Channel</p>
-      </div>
-      <div className="text">
-        <div className="icon">
-          <a class="fa-solid fa-clock-rotate-left"></a>
-        </div>
-        <p>History</p>
-      </div>
-      <div className="text">
-        <div className="icon">
-          <a class="fa-solid fa-film"></a>
-        </div>
-        <p>Your Videos</p>
-      </div>
-      <div className="text">
-        <div className="icon">
-          <a class="fa-solid fa-list"></a>
-        </div>
-        <p>Playlists</p>
-        {/* <p>Playlists</p> */}
-      </div>
-      <div className="text">
-        <div className="icon">
-          <a class="fa-solid fa-clock"></a>
-        </div>
-        <p>Watch Later</p>
-      </div>
-      <hr />
-      <span className="span">Subscriptions</span>
+    <div className={!isMobile ? "sidebar mini" : "sidebar"}>
+      <SidebarCard className={"fa-solid fa-house"} sidebarElement={"Home"} />
+      <Link className="sidebar-link" to="/explore">
+        <SidebarCard className={"fa-solid fa-ticket"} sidebarElement={"Explore"} />
+      </Link>
 
-      {/* {videos.map((video, index) => (
-          <SidebarCard key={index} channelName={video.channelName} />
-        ))} */}
+      <hr className="sidebar-separator" />
+      <span className="sidebar-span">You</span>
+      <You />
+      <hr className="sidebar-separator" />
+      <span className="sidebar-span">Explore</span>
+      <Explore />
 
-      <SubscriberCard channelName={"Adobe"} />
-      <SubscriberCard channelName={"Apple"} />
-      <SubscriberCard channelName={"Audi"} />
-      <SubscriberCard channelName={"BMW"} />
-      <SubscriberCard channelName={"FailArmy"} />
-      <SubscriberCard channelName={"UEFA"} />
-      <SubscriberCard channelName={"MKBHD"} />
+      <hr className="sidebar-separator" />
+      <span className="sidebar-span">Subscriptions</span>
+      <Subscriptions />
 
-      <div className="text">
-        <div className="icon">
-          <a class="fa-solid fa-caret-down"></a>
-        </div>
-        <p>Show More</p>
-      </div>
-      <hr />
-      <span className="span">Explore</span>
-      <div className="text">
-        <div className="icon">
-          <i class="fa-solid fa-fire"></i>
-        </div>
-        <p>Trending</p>
-      </div>
-      <div className="text">
-        <div className="icon">
-          <i class="fa-solid fa-music"></i>
-        </div>
-        <p>Music</p>
-      </div>
-      <div className="text">
-        <div className="icon">
-          <i class="fa-solid fa-gamepad"></i>
-        </div>
-        <p>Gaming</p>
-      </div>
-      <div className="text">
-        <div className="icon">
-          <i class="fa-solid fa-trophy"></i>
-        </div>
-        <p>Sports</p>
-      </div>
-      <hr />
-      <div className="text">
-        <div className="icon">
-          <i class="fa-solid fa-gear"></i>
-        </div>
-        <p>Settings</p>
-      </div>
-      <div className="text">
-        <div className="icon">
-          <i class="fa-solid fa-flag"></i>
-        </div>
-        <p>Report</p>
-      </div>
-      <div className="text">
-        <div className="icon">
-          <i class="fa-regular fa-circle-question"></i>
-        </div>
-        <p>Help</p>
-      </div>
-      <div className="text">
-        <div className="icon">
-          <i class="fa-solid fa-message"></i>
-        </div>
-        <p>Send Feedback</p>
-      </div>
+      <hr className="sidebar-separator" />
+      <SidebarCard className={"fa-solid fa-gear"} sidebarElement={"Settings"} />
+      <SidebarCard className={"fa-solid fa-circle-question"} sidebarElement={"Help"} />
+      <SidebarCard className={"fa-solid fa-envelope"} sidebarElement={"Contact"} />
+      <Link className="sidebar-link" to="/feedback">
+        <SidebarCard className={"fa-solid fa-message"} sidebarElement={"Feedback"} />
+      </Link>
     </div>
   );
 };

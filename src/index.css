@@ -1,8 +1,18 @@
 :root {
   --dark-gray: #555;
   --light-gray: #999;
+  --silver-gray: #bfb5af;
   --lighter-gray: #999999b1;
-  --purple-shadow: 0 0 3px #7400cc;
+  --purple-shadow: 0 0 3px #bfb5af;
+  --white-color: #fff;
+  --black-color: #0a090c;
+  --primary-color: #2c666e;
+  --secondary-color: #07393c;
+  --cadet-gray: #7c9395c4;
+  --faded-red: #07393c;
+  --shadow-primary: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --shadow-secondary: rgba(130, 130, 130, 0.6) 0px 2px 8px 0px;
+  --background-gradient: linear-gradient(0deg, var(--secondary-color), var(--primary-color));
 }
 
 * {
@@ -11,17 +21,12 @@
   font-family: "Raleway", sans-serif;
 }
 
+body {
+  width: 100%;
+  height: 100%;
+  /* background-color: var(--black-color); */
+}
+
 main {
-  display: grid;
-  grid-template-areas: "sidebar main main main";
-  width: 100%;
-}
-
-.video-page {
-  display: flex;
-  width: 100%;
-}
-
-.video-boxes {
   display: flex;
 }

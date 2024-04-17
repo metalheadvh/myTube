@@ -1,9 +1,10 @@
 .nav-box {
+  /* background-color: green; */
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  background-color: green;
+  width: 100%;
+  max-width: 100%;
+  box-shadow: var(--shadow-primary);
 }
 
 .navbar {
@@ -22,37 +23,69 @@
   display: flex;
   align-items: center;
   flex-direction: row;
-  flex-wrap: wrap;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  width: 100%;
 }
-.button {
+
+.buttons.right {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+}
+.button-nav {
   padding: 1rem;
 }
-.button a {
+.button-nav p {
   padding: 0.5rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   text-decoration: none;
-  color: var(--dark-gray);
+  color: var(--primary-color);
   transition: 0.3s ease-in;
-}
-
-.button a:hover {
-  border-radius: 30%;
-  background-color: var(--lighter-gray);
-}
-
-.button.menu {
   cursor: pointer;
 }
 
-@media (max-width: 1000px) {
-  .buttons .browse {
+.button-nav p:hover {
+  color: var(--dark-gray);
+}
+
+.button-nav.menu {
+  cursor: pointer;
+}
+
+.button-nav.logo {
+  font-size: 2rem;
+}
+.buttons h3 {
+  font-size: 2rem;
+  margin: 0 1rem;
+  color: var(--primary-color);
+}
+.buttons span {
+  font-size: 2rem;
+  margin: 0 1.5rem;
+  color: var(--primary-color);
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+
+.buttons h2:hover {
+  color: var(--dark-gray);
+}
+
+@media (max-width: 850px) {
+  .navbar h3 {
     display: none;
   }
+}
+@media (max-width: 757px) {
+  .buttons span {
+    display: none;
+  }
+}
+
+@media (max-width: 1049px) {
   .buttons .upload {
-    display: none;
-  }
-  .buttons .logo {
     display: none;
   }
 }

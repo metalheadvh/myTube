@@ -1,0 +1,42 @@
+.banner {
+  background-image: url(https://picsum.photos/2000/300?random);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--shadow-primary);
+}
+
+.channelImage img {
+  width: 150px;
+  height: 150px;
+  background-color: gray;
+  border-radius: 50%;
+  margin: 1rem;
+  box-shadow: var(--shadow-primary);
+}
+
+.channelName {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0 1rem;
+}
+
+.channelSubs {
+  background-color: white;
+  border-radius: 2rem;
+  font-size: 1rem;
+  padding: 1rem;
+  margin: 0 1rem;
+}
+
+.channelText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

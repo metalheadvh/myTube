@@ -1,0 +1,14 @@
+.dislike {
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.share-box h4 {
+  cursor: pointer;
+  margin: 0 0.5rem;
+}
+
+.share-box:hover {
+  cursor: pointer;
+}

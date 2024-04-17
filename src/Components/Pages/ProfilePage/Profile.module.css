@@ -1,0 +1,96 @@
+.channelVideos {
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-primary);
+  border-radius: 2rem;
+  margin: 0 0.5rem;
+}
+
+.buttonsBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.5rem;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 1rem;
+  box-shadow: var(--shadow-primary);
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+}
+
+.buttons button {
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s ease-in;
+  border: none;
+}
+
+.buttons button:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.videoGrid {
+  max-height: 900px;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  box-shadow: var(--shadow-primary);
+  border-radius: 2rem;
+  margin: 0 0.5rem 1rem 0.5rem;
+}
+
+.favorites h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  max-width: 200px;
+  padding: 1rem 2rem;
+  margin: 2rem auto;
+}
+
+.profileImage {
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 0.41rem 0;
+  flex-direction: column;
+}
+
+.profileOptions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 750px) {
+  .buttonsBox {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 470px) {
+  .buttons {
+    flex-direction: column;
+  }
+}

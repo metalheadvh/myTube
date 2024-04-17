@@ -1,0 +1,38 @@
+.shareBox {
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-color);
+  box-shadow: var(--shadow-secondary);
+  padding: 0.5rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  margin: 0 1rem;
+  transition: 0.3s ease-in;
+}
+
+.shareBox:hover {
+  box-shadow: var(--shadow-primary);
+}
+
+.shareBox button {
+  border: none;
+  margin: 0 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.shareBox p {
+  margin: 0 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--white-color);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
